@@ -1,0 +1,10 @@
+name: orkney_wind_model
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      degrees: {type: int, default: 3}
+      data: {type: string, default: 'orkney_wind_data.csv'}
+    command: "python train.py {degrees} {data}"
