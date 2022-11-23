@@ -6,5 +6,5 @@ entry_points:
   main:
     parameters:
       degrees: {type: int, default: 3}
-      data: {type: string, default: 'orkney_wind_data.csv'}
+      data: {type: string, default: 'official_data.csv'}
     command: "python train.py {degrees} {data}"

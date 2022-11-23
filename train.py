@@ -32,8 +32,8 @@ import pickle
 # mlflow.set_experiment("Orkney_wind_experiment")
 
 #Set tracking URI
-mlflow.set_tracking_uri("azureml://northeurope.api.azureml.ms/mlflow/v1.0/subscriptions/a5152d52-6a98-41f9-92ea-0a99dcc6347b/resourceGroups/Group1/providers/Microsoft.MachineLearningServices/workspaces/Assignment3")
-experiment_ID = mlflow.set_experiment("Orkney_wind_experiment")
+#mlflow.set_tracking_uri("azureml://northeurope.api.azureml.ms/mlflow/v1.0/subscriptions/a5152d52-6a98-41f9-92ea-0a99dcc6347b/resourceGroups/Group1/providers/Microsoft.MachineLearningServices/workspaces/Assignment3")
+#experiment_ID = mlflow.set_experiment("Orkney_wind_experiment")
 
 # This code was supplied by the teaching team of Big Data Management.
 # logging.basicConfig(level=logging.WARN)
@@ -103,23 +103,22 @@ if __name__ =="__main__":
         print("  R2: %s" % r2)
 
         
-        mlflow.log_param("poly_degree",poly_degree)
-        mlflow.log_metric("rmse",rmse)
-        mlflow.log_metric("r2",r2)
-        mlflow.log_metric("mae",mae)
+        #mlflow.log_param("poly_degree",poly_degree)
+        #mlflow.log_metric("rmse",rmse)
+        #mlflow.log_metric("r2",r2)
+        #mlflow.log_metric("mae",mae)
 
 
         
 
-        tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
-        arti_uri = mlflow.get_artifact_uri
+        #tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
         # Model registry does not work with file store
-        if tracking_url_type_store != "file":
+        #if tracking_url_type_store != "file":
 
             # Register the model
             # There are other ways to use the Model Registry, which depends on the use case,
             # please refer to the doc for more information:
             # https://mlflow.org/docs/latest/model-registry.html#api-workflow
-            mlflow.sklearn.log_model(pipeline_poly_scaled, "PolynomialRegressionModel_degree3")
+        #    mlflow.sklearn.log_model(pipeline_poly_scaled, "PolynomialRegressionModel_degree3")
 
