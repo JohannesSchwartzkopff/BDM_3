@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/johannesschwartzkopff/Big_Data_Mngmnt/Assignment_3/BDM_3/mlruns/0/6b344cda7c6d44839bb3c88e9cb67a32/artifacts
+end_time: 1669315928718
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6b344cda7c6d44839bb3c88e9cb67a32
+run_name: gaudy-asp-976
+run_uuid: 6b344cda7c6d44839bb3c88e9cb67a32
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1669315913153
+status: 3
+tags: []
+user_id: johannesschwartzkopff
