@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/johannesschwartzkopff/Big_Data_Mngmnt/Assignment_3/BDM_3/mlruns/0/ee959528df1d44079da939dc5566f608/artifacts
+end_time: 1669310919666
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ee959528df1d44079da939dc5566f608
+run_name: thoughtful-koi-668
+run_uuid: ee959528df1d44079da939dc5566f608
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1669310919535
+status: 3
+tags: []
+user_id: johannesschwartzkopff
