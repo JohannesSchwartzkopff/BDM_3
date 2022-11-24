@@ -32,8 +32,8 @@ import pickle
 #mlflow.set_experiment("Orkney_wind_experiment")
 
 #Set tracking URI
-mlflow.set_tracking_uri("azureml://northeurope.api.azureml.ms/mlflow/v1.0/subscriptions/a5152d52-6a98-41f9-92ea-0a99dcc6347b/resourceGroups/Group1/providers/Microsoft.MachineLearningServices/workspaces/Assignment3")
-experiment_ID = mlflow.set_experiment("Orkney_wind_experiment")
+#mlflow.set_tracking_uri("azureml://northeurope.api.azureml.ms/mlflow/v1.0/subscriptions/a5152d52-6a98-41f9-92ea-0a99dcc6347b/resourceGroups/Group1/providers/Microsoft.MachineLearningServices/workspaces/Assignment3")
+#experiment_ID = mlflow.set_experiment("Orkney_wind_experiment")
 
 # This code was supplied by the teaching team of Big Data Management.
 # logging.basicConfig(level=logging.WARN)
@@ -71,7 +71,7 @@ if __name__ =="__main__":
     enc = OneHotEncoder(handle_unknown='ignore', sparse=False)
     ct = ColumnTransformer([("encoder transformer", enc, ["Direction"])], remainder="passthrough")
     scaler = StandardScaler()
-    poly_degree = int(sys.argv[1]) if len(sys.argv) > 1 else 6
+    poly_degree = int(sys.argv[1]) if len(sys.argv) > 1 else 2
     poly = PolynomialFeatures(degree=poly_degree, include_bias=False)
     poly_reg = LinearRegression()
 
@@ -120,5 +120,7 @@ if __name__ =="__main__":
             # There are other ways to use the Model Registry, which depends on the use case,
             # please refer to the doc for more information:
             # https://mlflow.org/docs/latest/model-registry.html#api-workflow
-            mlflow.sklearn.log_model(pipeline_poly_scaled, "PolynomialRegressionModel")
+            mlflow.sklearn.log_model(pipeline_poly_scaled, "model")
+        else:
+            mlflow.sklearn.log_model(pipeline_poly_scaled,"model")
 
